@@ -11,6 +11,7 @@ thank
 
 Devops team
 “””, subject: “Build job jenkins report result status ${currentBuild.currentResult}”, to: ‘ikerhuynh95@gmail.com’
+}
 pipeline {
     agent any 
     stages{
