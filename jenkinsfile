@@ -16,6 +16,8 @@ pipeline {
         stage('Deploy'){
             steps {
                 echo 'Code deployed.'
+            }
+            steps {
                 sendMailReport()
             }
         }
