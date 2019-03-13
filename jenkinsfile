@@ -1,3 +1,16 @@
+
+def sendMailReport()
+{
+emailext body: “””Hi team
+please have a look the build status below:
+Project: devtayto.com
+Build Status: ${currentBuild.currentResult}
+Build URL: ${env.BUILD_URL}
+if you have issue please contact email admin@devtayto.com
+thank 
+
+Devops team
+“””, subject: “Build job jenkins report result status ${currentBuild.currentResult}”, to: ‘ikerhuynh95@gmail.com’
 pipeline {
     agent any 
     stages{
